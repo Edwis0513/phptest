@@ -1,9 +1,9 @@
 <?php
-$a = array (10,20,30,50,60,70,80);
-$b = [];
+// 15. Masyve, jo elementuose, yra surašytos HTML spalvos:
+// 1 elementas - red, 2 elementas - blue, 3 elementas - green, 4 elementas - yellow, 5 elementas - pink.
+//  Atspausdinti spalvotą tekstą foreach ciklo pagalba, kai vartojamos to masyvo elementuose aprašytos spalvos.
 
-foreach (range(1, count($a), 2) as $key) {
-  unset($a[$key]);
-}
-$b = array_merge($a);
-print_r($b);
+$colors = ['red', 'blue', 'green', 'yellow', 'pink'];
+foreach ($colors as $color) {
+    echo "<p style='color: $color'>$color</p>";
+} 
