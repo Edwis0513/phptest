@@ -1,15 +1,16 @@
 
 <?php
-//12. Turime masyvą:
-//Padidinkite masyvo elementų reikšmes 10 kartų ir atspausdinkite foreach pagalba. Tekstinės lieka nepakeistos.
-$a = array (10,20,30, 1, 1 ,50, 0, 0, "jonas", "petras");
 
-$filtered_num = array_filter($a, 'is_int');
-$filtered_string = array_filter($a, 'is_string');
-$filtered_num[] = $value * 60;
+// 13. Turime masyvą:
+// Sukurkite seno masyvo pagrindu naują masyvą. Palikite tiek vardų - elementų, kokia yra 
+// pirma masyvo reikšmė ir atspausdinkite. Surasti, kiek masyve elementų,
+//  naudokite $count = count($a); sakinį, (masyvo elementų kiekį). 
+//  Konfigūracijos parametro, t.y. pirmo elemento nelieka.
 
-$a = array_merge($filtered_num, $filtered_string);
 
-foreach ($a as $value) {
-    print($value);
-   }
+
+$a = [3, "jonas"=>20,"petras" => 20, "simas" =>30, "ana" => 40, "gita" =>50];
+$b = array_slice($a, 1, $a[0]); 
+print_r($b);
+print_r(count($b));
+?>
