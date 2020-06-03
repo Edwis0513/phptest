@@ -1,12 +1,14 @@
+
 <?php
+//8. Ištaisykite kodą: rezultate spausdins "skirtumas yra":
 
-//7. Ką reikia užkomentuoti, kad $e įgytų reikšmę 4:
+$a =10;
+$b =30;
+if ($a - $b){
+echo "skirtumas yra";
+}
+else {
+echo "skirtumo nera";
+}
 
-$a = 5;
-//$b = $a + 1; //6
-//$c = $a -  1; //4
-$d = $c -  1; //3
-//    3 + 5 - 6 + 4
-$e = $d + $a -$b + $c;
-print $e;
 ?>
