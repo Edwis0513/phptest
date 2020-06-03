@@ -1,22 +1,13 @@
-
 <?php
-//14. Turime masyvą:
-//Sukurkite seno masyvo pagrindu naują masyvą. Sumažinkite jo elementų kiekį 2 kartus,
- //t.y. palikite kas antrą elementą ir atspausdinkite.
+//12. Turime masyvą:
+//Padidinkite masyvo elementų reikšmes 10 kartų ir atspausdinkite foreach pagalba. Tekstinės lieka nepakeistos.
 
-
-$a = array (10,20,30,50,60,70,80);
-$b = [];
-
-foreach (range(1, count($a), 2) as $key) {
-  unset($a[$key]);
+   $a = array (10,20,30, 1, 1 ,50, 0, 0, "jonas", "petras");
+foreach ($a as $b) {
+    if (is_numeric($b)) {
+        $new_array[] = $b * 10;
+    } else {
+        $new_array[] = $b;
+    }
 }
-$b = array_merge($a);
-print_r($b);
-
-// 15. Masyve, jo elementuose, yra surašytos HTML spalvos:
-// 1 elementas - red, 2 elementas - blue, 3 elementas - green, 4 elementas - yellow, 5 elementas - pink.
-//  Atspausdinti spalvotą tekstą foreach ciklo pagalba, kai vartojamos to masyvo elementuose aprašytos spalvos.
-
-
-?>
+var_dump($new_array);
