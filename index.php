@@ -1,16 +1,22 @@
 
 <?php
-
-// 13. Turime masyvą:
-// Sukurkite seno masyvo pagrindu naują masyvą. Palikite tiek vardų - elementų, kokia yra 
-// pirma masyvo reikšmė ir atspausdinkite. Surasti, kiek masyve elementų,
-//  naudokite $count = count($a); sakinį, (masyvo elementų kiekį). 
-//  Konfigūracijos parametro, t.y. pirmo elemento nelieka.
+//14. Turime masyvą:
+//Sukurkite seno masyvo pagrindu naują masyvą. Sumažinkite jo elementų kiekį 2 kartus,
+ //t.y. palikite kas antrą elementą ir atspausdinkite.
 
 
+$a = array (10,20,30,50,60,70,80);
+$b = [];
 
-$a = [3, "jonas"=>20,"petras" => 20, "simas" =>30, "ana" => 40, "gita" =>50];
-$b = array_slice($a, 1, $a[0]); 
+foreach (range(1, count($a), 2) as $key) {
+  unset($a[$key]);
+}
+$b = array_merge($a);
 print_r($b);
-print_r(count($b));
+
+// 15. Masyve, jo elementuose, yra surašytos HTML spalvos:
+// 1 elementas - red, 2 elementas - blue, 3 elementas - green, 4 elementas - yellow, 5 elementas - pink.
+//  Atspausdinti spalvotą tekstą foreach ciklo pagalba, kai vartojamos to masyvo elementuose aprašytos spalvos.
+
+
 ?>
