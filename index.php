@@ -1,13 +1,9 @@
 <?php
-//12. Turime masyvą:
-//Padidinkite masyvo elementų reikšmes 10 kartų ir atspausdinkite foreach pagalba. Tekstinės lieka nepakeistos.
+$a = array (10,20,30,50,60,70,80);
+$b = [];
 
-   $a = array (10,20,30, 1, 1 ,50, 0, 0, "jonas", "petras");
-foreach ($a as $b) {
-    if (is_numeric($b)) {
-        $new_array[] = $b * 10;
-    } else {
-        $new_array[] = $b;
-    }
+foreach (range(1, count($a), 2) as $key) {
+  unset($a[$key]);
 }
-var_dump($new_array);
+$b = array_merge($a);
+print_r($b);
